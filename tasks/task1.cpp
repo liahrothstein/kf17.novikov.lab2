@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-#include "../utils/func-value-calculate.cpp"
+#include "../utils/func-value-calculate.cpp" /*Импорт функции вычисления значения функции*/
 
 int main() {
     double z, x, y;
@@ -15,14 +15,14 @@ int main() {
         scanf("%lf", &z);
 
         if (z != 0) {
-            if (z > 0) {
+            if (z > 0) { /*Проверка z и вычисление х*/
                 x = sqrt(z);
             } else {
                 x = (3 * pow(z, 3) - z) - 5;
             }
             printf("\nx=%.2lf", x);
             
-            y = funcValueCalculate(x);
+            y = funcValueCalculate(x); /*Вычисление значения функции*/
             printf("\ny=%.2lf", y);
         } else break;
     };
