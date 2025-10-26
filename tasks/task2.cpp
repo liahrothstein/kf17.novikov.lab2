@@ -1,32 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-bool isError = false;
-
-double calculate(double num1, char op, double num2) {
-    switch (op) {
-        case '+' :
-            return (num1 + num2);
-        case '-' :
-            return (num1 - num2);
-        case '*' :
-            return (num1 * num2);
-        case '/' :
-            if (num2 != 0) {
-                return (num1 / num2);
-            } else {
-                printf("Ошибка: деление на ноль\n");
-                isError = true;
-
-                return 0;
-            }
-            default:
-                printf("Ошибка: неизвестный оператор\n");
-                isError = true;
-
-                return 0;
-    }
-};
+#include "../utils/calcultate.cpp"
 
 int main() {
     double number1, number2, result;
@@ -34,6 +9,8 @@ int main() {
 
     printf("Программа может выполнять сложение, вычитание, умножение и деление двух чисел а и b\n");
     printf("А также вычисляет выражение a^b, и показывает результат\n");
+    printf("\n\nИсполнитель: Новиков Д. А.");
+    printf("\nВариант: №14");
 
     printf("\nПожалуйста введите первое число: ");
     scanf("%lf", &number1);
